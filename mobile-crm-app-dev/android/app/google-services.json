@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "928761491421",
+    "project_id": "sicix-88a3f",
+    "storage_bucket": "sicix-88a3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928761491421:android:935d5df489534093401034",
+        "android_client_info": {
+          "package_name": "com.ngsc.sicix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928761491421-mfndjb87i7j966f8pd9nu9ndknab1gu4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEn-jb4lB9GYAXHb1ddWZEzsVU1LDHR4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928761491421-mfndjb87i7j966f8pd9nu9ndknab1gu4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "928761491421-i9h19rup1prrb27erh177ahhmh4rgd9b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ngsc.sicix"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

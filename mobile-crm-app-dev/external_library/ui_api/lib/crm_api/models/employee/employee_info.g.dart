@@ -1,0 +1,101 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'employee_info.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+EmployeeInfo _$EmployeeInfoFromJson(Map<String, dynamic> json) => EmployeeInfo(
+      createDate: json['createDate'] as String?,
+      modifiedDate: json['modifiedDate'] as String?,
+      status: json['status'] as int?,
+      createBy: json['createBy'] as String?,
+      updateBy: json['updateBy'] as String?,
+      id: json['id'] as int?,
+      employeeAvatarId: json['employeeAvatarId'] as String?,
+      employeeCode: json['employeeCode'] as String?,
+      employeeFirstName: json['employeeFirstName'] as String?,
+      employeeLastName: json['employeeLastName'] as String?,
+      employeeMiddleName: json['employeeMiddleName'] as String?,
+      employeeEmail: json['employeeEmail'] as String?,
+      employeePhone: json['employeePhone'] as String?,
+      employeeTitleId: json['employeeTitleId'] as int?,
+      employeeTitleName: json['employeeTitleName'] as String?,
+      employeeContractId: json['employeeContractId'] as String?,
+      employeeContractName: json['employeeContractName'] as String?,
+      organizationId: json['organizationId'] as int?,
+      organizationName: json['organizationName'] as String?,
+      userId: json['userId'] as String?,
+      username: json['username'] as String?,
+      employeeCountryId: json['employeeCountryId'] as String?,
+      employeeCountryName: json['employeeCountryName'] as String?,
+      employeeDistrictId: json['employeeDistrictId'] as String?,
+      employeeDistrictName: json['employeeDistrictName'] as String?,
+      employeeProvinceId: json['employeeProvinceId'] as String?,
+      employeeProvinceName: json['employeeProvinceName'] as String?,
+      employeePostalCode: json['employeePostalCode'] as String?,
+      employeeStreet: json['employeeStreet'] as String?,
+      employeeCountryTimeZoneId: json['employeeCountryTimeZoneId'] as String?,
+      employeeCountryTimeZoneName:
+          json['employeeCountryTimeZoneName'] as String?,
+      employeeCountryTimeZoneText:
+          json['employeeCountryTimeZoneText'] as String?,
+      employeeLanguageId: json['employeeLanguageId'] as String?,
+      employeeLanguageName: json['employeeLanguageName'] as String?,
+      isAdmin: json['isAdmin'] as int?,
+      isActive: json['isActive'] as int?,
+      totalUsed: json['totalUsed'] as String?,
+      authorGroupEmployeeDtos:
+          json['authorGroupEmployeeDTOS'] as List<dynamic>?,
+      employeeSubTitle: json['employeeSubTitle'] as String?,
+      employeeLevelId: json['employeeLevelId'] as int?,
+      allowEmployeeIds: (json['allowEmployeeIds'] as List<dynamic>?)
+          ?.map((e) => e as int)
+          .toList(),
+    );
+
+Map<String, dynamic> _$EmployeeInfoToJson(EmployeeInfo instance) =>
+    <String, dynamic>{
+      'createDate': instance.createDate,
+      'modifiedDate': instance.modifiedDate,
+      'status': instance.status,
+      'createBy': instance.createBy,
+      'updateBy': instance.updateBy,
+      'id': instance.id,
+      'employeeAvatarId': instance.employeeAvatarId,
+      'employeeCode': instance.employeeCode,
+      'employeeFirstName': instance.employeeFirstName,
+      'employeeLastName': instance.employeeLastName,
+      'employeeMiddleName': instance.employeeMiddleName,
+      'employeeEmail': instance.employeeEmail,
+      'employeePhone': instance.employeePhone,
+      'employeeTitleId': instance.employeeTitleId,
+      'employeeTitleName': instance.employeeTitleName,
+      'employeeContractId': instance.employeeContractId,
+      'employeeContractName': instance.employeeContractName,
+      'organizationId': instance.organizationId,
+      'organizationName': instance.organizationName,
+      'userId': instance.userId,
+      'username': instance.username,
+      'employeeCountryId': instance.employeeCountryId,
+      'employeeCountryName': instance.employeeCountryName,
+      'employeeDistrictId': instance.employeeDistrictId,
+      'employeeDistrictName': instance.employeeDistrictName,
+      'employeeProvinceId': instance.employeeProvinceId,
+      'employeeProvinceName': instance.employeeProvinceName,
+      'employeePostalCode': instance.employeePostalCode,
+      'employeeStreet': instance.employeeStreet,
+      'employeeCountryTimeZoneId': instance.employeeCountryTimeZoneId,
+      'employeeCountryTimeZoneName': instance.employeeCountryTimeZoneName,
+      'employeeCountryTimeZoneText': instance.employeeCountryTimeZoneText,
+      'employeeLanguageId': instance.employeeLanguageId,
+      'employeeLanguageName': instance.employeeLanguageName,
+      'isAdmin': instance.isAdmin,
+      'isActive': instance.isActive,
+      'totalUsed': instance.totalUsed,
+      'authorGroupEmployeeDTOS': instance.authorGroupEmployeeDtos,
+      'employeeSubTitle': instance.employeeSubTitle,
+      'employeeLevelId': instance.employeeLevelId,
+      'allowEmployeeIds': instance.allowEmployeeIds,
+    };

@@ -1,0 +1,26 @@
+name: infrastructure
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+publish_to: "none"
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  data_infrastructure:
+    path: data
+  dio: ^4.0.4
+  openapi_generator_annotations: ^3.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  build_runner:
+  openapi_generator: ^3.2.1
+
+flutter:

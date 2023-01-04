@@ -1,0 +1,954 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Medical.API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/DiseaseSymptons": {
+      "get": {
+        "tags": [
+          "DiseaseSymptons"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseSymptomSummaryDtos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseSymptomSummaryDtos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseSymptomSummaryDtos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "DiseaseSymptons"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDiseaseSymptomCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDiseaseSymptomCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDiseaseSymptomCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Doctors": {
+      "get": {
+        "tags": [
+          "Doctors"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorSummaryDtos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorSummaryDtos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorSummaryDtos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Doctors/{ID}": {
+      "get": {
+        "tags": [
+          "Doctors"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoctorSummaryDtos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoctorSummaryDtos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoctorSummaryDtos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Hospitals": {
+      "get": {
+        "tags": [
+          "Hospitals"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HospitalSummaryDtos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HospitalSummaryDtos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HospitalSummaryDtos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Hospitals/{ID}": {
+      "get": {
+        "tags": [
+          "Hospitals"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HospitalSummaryDtos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HospitalSummaryDtos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HospitalSummaryDtos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/MedicalExaminationSchedules": {
+      "get": {
+        "tags": [
+          "MedicalExaminationSchedules"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "MedicalExaminationSchedules"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMedicalExaminationScheduleCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMedicalExaminationScheduleCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMedicalExaminationScheduleCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MedicalExaminationSchedules/{customerID}/customer": {
+      "get": {
+        "tags": [
+          "MedicalExaminationSchedules"
+        ],
+        "parameters": [
+          {
+            "name": "customerID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MedicalExaminationSchedules/{doctorID}/doctor": {
+      "get": {
+        "tags": [
+          "MedicalExaminationSchedules"
+        ],
+        "parameters": [
+          {
+            "name": "doctorID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MedicalExaminationSchedules/{hospitalID}/hospital": {
+      "get": {
+        "tags": [
+          "MedicalExaminationSchedules"
+        ],
+        "parameters": [
+          {
+            "name": "hospitalID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MedicalExaminationSchedules/{ID}": {
+      "get": {
+        "tags": [
+          "MedicalExaminationSchedules"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Prescriptions": {
+      "get": {
+        "tags": [
+          "Prescriptions"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PrescriptionSummaryDtos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PrescriptionSummaryDtos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PrescriptionSummaryDtos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Prescriptions"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePrescriptionCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePrescriptionCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePrescriptionCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrescriptionDetailDtos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrescriptionDetailDtos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrescriptionDetailDtos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Prescriptions/{ID}": {
+      "get": {
+        "tags": [
+          "Prescriptions"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrescriptionDetailDtos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrescriptionDetailDtos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrescriptionDetailDtos"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DiseaseSymptomSummaryDtos": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateDiseaseSymptomCommand": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorsSpecialistDtos": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorCalendarDtos": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAvailable": {
+            "type": "boolean"
+          },
+          "shift": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorSummaryDtos": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalID": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalName": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "string",
+            "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoctorsSpecialistDtos"
+            },
+            "nullable": true
+          },
+          "calendars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoctorCalendarDtos"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HospitalCalendarDtos": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string",
+            "nullable": true
+          },
+          "isOpen": {
+            "type": "boolean"
+          },
+          "shift": {
+            "type": "string",
+            "nullable": true
+          },
+          "openTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "closeTime": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HospitalServiceDtos": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "forceColor": {
+            "type": "string",
+            "nullable": true
+          },
+          "backgroundColor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HospitalSummaryDtos": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "website": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "lat": {
+            "type": "string",
+            "nullable": true
+          },
+          "long": {
+            "type": "string",
+            "nullable": true
+          },
+          "calendars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HospitalCalendarDtos"
+            },
+            "nullable": true
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HospitalServiceDtos"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateMedicalExaminationScheduleCommand": {
+        "type": "object",
+        "properties": {
+          "customerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerGender": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalID": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "examinationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "diseaseSymptoms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrescriptionSummaryDtos": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "hospitalID": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorID": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "medicalExaminationScheduleID": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrescriptionDetailData": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "drugName": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "taxPercent": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalTax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalNoTax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalWithTax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePrescriptionCommand": {
+        "type": "object",
+        "properties": {
+          "customerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "hospitalID": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorID": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "medicalExaminationScheduleID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PrescriptionDetailData"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrescriptionDetailDtos": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "hospitalID": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hospitalAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorID": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PrescriptionDetailData"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
